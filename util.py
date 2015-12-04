@@ -12,14 +12,14 @@ def get_final_path(job, match, filename):
         buildtype = conf.buildtype_mapping[buildtype]
 
     else:
-        buildtype = 'release'
+        buildtype = conf.buildtype_mapping['default']
 
     release = match.group('release')
     if release in conf.release_mapping:
         release = conf.release_mapping[release]
 
     else:
-        release = 'nightly'
+        release = conf.release_mapping['default']
 
     final_path = conf.ship_directory.format(release,buildtype,filename)
     path_check = conf.ship_directory.format(release,buildtype,'')

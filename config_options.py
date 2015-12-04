@@ -20,8 +20,8 @@ ship_directory = '/path/to/fileendpoint/{0}-{1}/{2}'
 
 #the mapping between regex extracted jobname variables and actual folders
 #in case they don't match exactly
-release_mapping = {'nightly':'nightly'}
-buildtype_mapping = {'debug':'debug'}
+release_mapping = {'nightly':'nightly', 'default':stable'}
+buildtype_mapping = {'debug':'debug', 'default':'release'}
 
 #sqlitedb containing the hash of each job's file
 sqlitepath='/path/to/packagehash.db'
